@@ -26,7 +26,7 @@ function Login (props) {
 
         setDisplaymssage('Please Wait ...')  
         try{
-            let response = await fetch('http://192.168.43.239:3000/api/users/login',{
+            let response = await fetch(window.location.href + '/api/users/login',{
             method : 'POST',
         body: JSON.stringify(data)
             
