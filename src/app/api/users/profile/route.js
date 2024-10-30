@@ -7,7 +7,8 @@ import { NextResponse } from "next/server";
 
 
 export const GET = async () => {
-   try{
+   console.log('api called.......')
+  try{
 
     const response = NextResponse.json({ massage:"logout" , sucess : true ,status: 202 })
     

@@ -28,7 +28,7 @@ function Register(props) {
         setMssage('')
         console.log(data)
         try{
-            let response = await fetch('http://localhost:3000/api/users/register',{
+            let response = await fetch(window.location.origin+'\/api/users/register',{
                 method : 'POST',
               body: JSON.stringify(data)
             

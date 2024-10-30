@@ -20,12 +20,14 @@ function Profile() {
 
 
     const oneLogout = async (e) => {
-        let response = await fetch('http://192.168.43.239:3000/api/users/profile');
-    
-        if (response.status === 200) { console.log('sucess') }
+        let response = await fetch(window.location.origin+'/api/users/profile');
+
+       if (response.status === 200) { console.log('sucess') 
         router.push('./login')
         response = await response.json()
     }
+
+}
 
     return (
         <>

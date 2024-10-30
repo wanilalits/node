@@ -26,7 +26,7 @@ function Login (props) {
 
         setDisplaymssage('Please Wait ...')  
         try{
-            let response = await fetch(window.location.href + '/api/users/login',{
+            let response = await fetch(window.location.origin+'/api/users/login',{
             method : 'POST',
         body: JSON.stringify(data)
             
@@ -35,7 +35,7 @@ function Login (props) {
             if (response.status===200){
                 response = await response.json()
               localStorage.setItem("value", JSON.stringify(response))
-              return  router.push('./ profile')
+              return  router.push('./profile')
              
             }
             
