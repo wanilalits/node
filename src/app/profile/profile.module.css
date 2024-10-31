@@ -35,10 +35,9 @@ right: 3cm;
 bottom:10% ;
 font-size: 90%;
 text-align: center;
-width: 3cm;
-height: 36px;
 transition: 0.4s;
-padding-top: 10px;
+padding-left: 10px;
+padding-right: 10px;
 }
 
 .profileName:hover {
