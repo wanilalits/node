@@ -18,7 +18,7 @@
     background-color: blue;
     right: 5px;
     bottom:-20px;
-    opacity: 1;
+   
 }
 
 .profile1:hover {
@@ -29,25 +29,94 @@
 }
 
 .profileName{
-position: absolute;
+position:absolute;
 font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-left: 85%;
+right: 3cm;
 bottom:10% ;
-transform: translate(-50% ,0%);
-align-self: center;
-font-size: 150%;
+font-size: 90%;
 text-align: center;
-width: 170px;
+width: 3cm;
 height: 36px;
-align-content: center;
 transition: 0.4s;
-
+padding-top: 10px;
 }
 
 .profileName:hover {
-
 border-radius: 8px;
-    background-color:  rgb(204, 211, 161);
-    
+background-color:  rgb(204, 211, 161);
 }
 
+.dashboardBox{
+    position:relative;
+    background-color: rgb(255, 255, 255);
+    height: 200px;
+
+    border: 1px solid black;
+}
+
+.dashboardBox1{
+position: absolute;
+display: inline-block;
+    border: 1px solid rgb(104, 4, 4);
+    height: 100%;
+    width: 103px;
+ margin-left: 10px;
+}
+
+.dashboardlabel1{
+    display: inline-block;
+    color: rgb(15, 3, 6);
+    background-color: rgb(236, 239, 241);
+  border-radius: 5px;
+    height: 130px;
+    width: 90px;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+.dashboardlabel2{
+    display: inline-block;
+    color: rgb(15, 3, 6);
+    border: 1px solid rgb(104, 4, 4);
+ border-radius: 100%;
+    height: 30px;
+    width: 30px;
+    margin-top: 15px;
+    margin-left: 20px;
+}
+
+.dashboardBox2{
+    position: absolute;
+        border: 1px solid rgb(104, 4, 4);
+        height: 100%;
+        width: 170px;
+        left: 120px;
+       
+    }
+
+    .dashboardInput{
+        position: absolute;
+        margin-top: 15px;
+        margin-left: 5px;
+        height: 30px;
+        width: 92%;
+           
+        }
+
+        .dashboardbtn1{
+            position: absolute;
+            top: 90px;
+            width: 25%;
+            left: 20px;
+            border-radius: 10px;
+            height: 30px;
+            }
+
+            .dashboardbtn2{
+                position: absolute;
+                top: 90px;
+                right: 20px;
+                width: 25%;
+                border-radius: 10px;
+                height:  30px;
+                }

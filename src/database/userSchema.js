@@ -18,26 +18,31 @@ password:{
     require:true
 } 
 });
-export const Log = mongoose.models.loginCollections|| mongoose.model('loginCollections',logModel);
+export const Log = mongoose.models.logincollections|| mongoose.model('logincollections',logModel);
 
 
 
 
-/*
-import mongoose from "mongoose";
 
-const userSchema = new mongoose.Schema({
+
+const sensorlogModel=new mongoose.Schema({
+    sensor:{
+    type : String,
+    require:true
+},
+sw:{
+    type : String,
+    require:true  , 
+unique :true
+},
+btn:{
+    type : String,
+    require:true
+} ,
 
 
 });
-
-const User =mongoose.models.loginIn || mongoose.model('loginIn', userSchema);
-export default User
+export const Sensor = mongoose.models.sensorCollections|| mongoose.model('sensorCollections',sensorlogModel);
 
 
-firstname:String,
-    lastname:String,
-    address:String,
-    time:String,
 
-*/

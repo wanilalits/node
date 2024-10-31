@@ -36,12 +36,26 @@ function Profile() {
             <div className={profile.profile}  >
              
                 <div className={profile.profile1} onClick={(e) => (oneLogout(e))}  >  </div>
-                <div className={profile.profileName} > {data1} </div>
+                <div className={profile.profileName} >Welcome {data1} </div>
             </div>
 <div>
-            <p>in Profile Page</p>
+            <h3>in The Profile Page</h3>
             
             <button onClick={(e) => (oneLogout(e))}>&nbsp; LogOut &nbsp;</button>  &nbsp;
+<br></br> <br></br>
+            <div className={profile.dashboardBox}>
+            <div className={profile.dashboardBox1}>
+            <label className={profile.dashboardlabel1}></label>
+            <label className={profile.dashboardlabel2}></label>
+            </div>
+            <div className={profile.dashboardBox2}>
+            <input className={profile.dashboardInput} ></input>
+            <button className={profile.dashboardbtn1} >ON</button>
+            <button className={profile.dashboardbtn2} >OFF</button>
+          </div>
+          
+
+            </div>
             </div>
         </>
     );

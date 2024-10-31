@@ -15,7 +15,7 @@ export const POST = async (reqest) => {
     await mongoose.connect(connectionStr)
 
     let log = await Log.findOne({ username: payload.username });
-   
+  
     if (!log) {
        
         return NextResponse.json('user not found', { status: 202 })

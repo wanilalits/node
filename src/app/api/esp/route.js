@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import { Log } from "@/database/userSchema";
+import { Sensor } from "@/database/userSchema";
 import { NextResponse } from "next/server";
 import bcryprjs from 'bcryptjs'
 import jwt from 'jsonwebtoken'
@@ -7,8 +7,11 @@ const connectionStr = "mongodb+srv://lalilswani:KrGXqcaDbahGMmaL@cluster0.ygf21f
 
 
 export const GET = async () => {
-    
-    const response = NextResponse.json( {position:'HTTPS API Hit successfully',inputdata:"Welcome ElectroSoft", status: 202 })
+
+
+
+
+    const response = NextResponse.json({ position: 'HTTPS API Hit successfully', inputdata: "Welcome ElectroSoft", status: 202 })
     return response;
 
 }
@@ -17,8 +20,16 @@ export const GET = async () => {
 
 export const POST = async (reqest) => {
     let payload = await reqest.json();
-    console.log (payload)
-    const response = NextResponse.json( {position:'HTTPS API Hit successfully',inputdata:payload, status: 202 })
+console.log(payload._id)
+    await mongoose.connect(connectionStr)
+   //
+    const filter = {_id:logId}
+    //const payload = await request.json();
+    console.log(payload)
+    const result = await Log.findOneAndUpdate(filter,payload)
+
+//
+    const response = NextResponse.json({ position: payload, inputdata: payload, status: 202 })
     return response;
 
 }
