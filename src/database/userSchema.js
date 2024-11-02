@@ -28,17 +28,19 @@ export const Log = mongoose.models.logincollections|| mongoose.model('logincolle
 const sensorlogModel=new mongoose.Schema({
     sensor:{
     type : String,
-    require:true
 },
 sw:{
     type : String,
-    require:true  , 
-unique :true
+     
 },
 btn:{
     type : String,
-    require:true
+
 } ,
+msg:{
+    type : String,
+   
+} 
 
 
 });

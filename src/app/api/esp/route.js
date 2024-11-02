@@ -20,16 +20,13 @@ export const GET = async () => {
 
 export const POST = async (reqest) => {
     let payload = await reqest.json();
-console.log(payload._id)
-    await mongoose.connect(connectionStr)
-   //
-    const filter = {_id:logId}
-    //const payload = await request.json();
     console.log(payload)
-    const result = await Log.findOneAndUpdate(filter,payload)
-
-//
-    const response = NextResponse.json({ position: payload, inputdata: payload, status: 202 })
+    await mongoose.connect(connectionStr)
+   const filter = {_id:payload._id}
+    let data ={sensor:payload.sensor,sw:payload.sw, btn:payload.btn, msg:payload.msg }
+     await Sensor.findOneAndUpdate(filter,data)
+     const result =  await Sensor.findOne(filter);
+    const response = NextResponse.json({ position: result,  status: 202 })
     return response;
 
 }
