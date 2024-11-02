@@ -7,16 +7,9 @@ const connectionStr = "mongodb+srv://lalilswani:KrGXqcaDbahGMmaL@cluster0.ygf21f
 
 
 export const GET = async () => {
-
-
-
-
     const response = NextResponse.json({ position: 'HTTPS API Hit successfully', inputdata: "Welcome ElectroSoft", status: 202 })
     return response;
-
 }
-
-
 
 export const POST = async (reqest) => {
     let payload = await reqest.json();
@@ -26,7 +19,7 @@ export const POST = async (reqest) => {
     let data ={sensor:payload.sensor,sw:payload.sw, btn:payload.btn, msg:payload.msg }
      await Sensor.findOneAndUpdate(filter,data)
      const result =  await Sensor.findOne(filter);
-    const response = NextResponse.json({ position: result,  status: 202 })
+    const response = NextResponse.json({ position: 'sag',  status: 202 })
     return response;
 
 }
