@@ -6,10 +6,8 @@ export default function Home() {
 
   return (
     <>
-bvdbdf
-<div>
-<Login></Login>
-</div>
+<h2>V1.0</h2>
+
     </>
   );
 }

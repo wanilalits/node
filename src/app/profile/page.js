@@ -26,7 +26,7 @@ function Profile() {
         
         const interval = setInterval(() => {
           getData()
-        }, 7000);
+        }, 10000);
         //Clearing the interval0
         return () => clearInterval(interval);
   
