@@ -39,7 +39,7 @@ function Login (props) {
              
             }
             
-            setDisplaymssage('Please check user ID and password')
+            setDisplaymssage('Please check user ID or password')
            
        
         }
